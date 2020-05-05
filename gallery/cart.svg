@@ -1,0 +1,15 @@
+<svg id="cart" xmlns="http://www.w3.org/2000/svg" width="28.543" height="24.509" viewBox="0 0 28.543 24.509">
+  <g id="Group_136" data-name="Group 136" transform="translate(8.025 4.955)">
+    <path id="Path_312" data-name="Path 312" d="M3156.294,728.8l2.784,13.6h12.7a1.526,1.526,0,0,0,1.44-1.021l3.555-11.658a.692.692,0,0,0-.653-.923Z" transform="translate(-3156.294 -728.804)" fill="#1a3fcf"/>
+  </g>
+  <g id="Group_137" data-name="Group 137" transform="translate(0 0)">
+    <path id="Path_313" data-name="Path 313" d="M3149.974,729.031H3136.2a1.348,1.348,0,0,1-1.319-1.069l-3.148-14.819h-3.824a1.349,1.349,0,0,1,0-2.7h4.917a1.35,1.35,0,0,1,1.32,1.069l3.148,14.819h12.68a1.349,1.349,0,0,1,0,2.7Z" transform="translate(-3126.559 -710.444)" fill="#1a3fcf"/>
+  </g>
+  <g id="Group_138" data-name="Group 138" transform="translate(10.868 20.543)">
+    <ellipse id="Ellipse_28" data-name="Ellipse 28" cx="1.983" cy="1.983" rx="1.983" ry="1.983" transform="translate(0 0)" fill="#15afb7"/>
+  </g>
+  <g id="Group_139" data-name="Group 139" transform="translate(18.668 20.543)">
+    <ellipse id="Ellipse_29" data-name="Ellipse 29" cx="1.983" cy="1.983" rx="1.983" ry="1.983" transform="translate(0 0)" fill="#15afb7"/>
+  </g>
+  <path id="Union_31" data-name="Union 31" d="M3.3,8.817v-3.3H0V3.563H3.3V0H5.254V3.563H8.817V5.522H5.254v3.3Z" transform="translate(21.719 7.279) rotate(90)" fill="#15afb7"/>
+</svg>
