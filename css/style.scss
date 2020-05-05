@@ -1,0 +1,1390 @@
+@import 'custom';
+.form-control[readonly] {
+	background-color: transparent;
+}
+header{
+	background-color: $primary-color;
+	position: sticky;
+	top: -100px;
+	transition: .2s linear;
+	z-index: 999;
+	font-size: 14px;
+	@include responsivemd{
+		position: static;
+	}
+	&.added{
+		top: 0px;
+		transition: .4s linear;
+	}
+	.section-rule{
+		padding: 10px 0;
+	}
+	.row{
+		align-items: center;
+	}
+	.logo{
+		img{
+			height: auto;
+			width: 10rem;
+			@include responsive(1002px){
+				width: 7rem;
+			}
+			@include responsivesm{
+				width: 8rem;
+			}
+			@include responsive(341px){
+				width: 7rem;
+			}
+		}
+	}
+	.form-inline{
+		background-color: #fff;
+		border-radius: 6px;
+		justify-content: space-between;
+		height: 55px;
+		position: relative;
+		overflow: hidden;
+		position: relative;
+		.form-control{
+			font-size: 14px;
+			@include responsive(413px){
+				width: 13px;
+			}
+		}
+		@include responsive(1002px){
+			height: 46px;
+		}
+		@include responsivemd{
+			height: 38px;
+			width: 250px;
+			margin-left: auto;
+			background-color: transparent;
+		}
+		@include responsivesm{
+			width: 100%;
+		}
+		@include responsive(413px){
+			height: 36px;
+			padding: 0 4px;
+		}
+		
+		@include responsive(341px){
+			height: 32px;
+		}
+		
+
+		input{
+			border: 0;
+			background-color: transparent ;
+			transition: .3s ease-out;
+			&::placeholder{
+				color: #888;
+				@include responsivemd{
+					color: rgba($white,0.6);
+				}
+			}
+			color: #666;
+			@include responsivemd{
+				color: rgba($white,1);
+				border-left: 1px solid rgba(255, 255, 255, 0.2);
+			}
+			@include responsivesm{
+				border: 0;
+			}
+			@include focus;
+			
+			&:focus, &:focus-within{
+				@include responsivemd{
+					transition: .3s ease-in;
+					background-color: rgba($white, 0.1);
+					color: $white;
+				}
+				@include responsivesm{
+					width: 100% !important;
+					@include transition; 
+				}
+			}
+			
+		}
+		button[type=submit]{
+			height: 100%;
+			padding: 0 40px;
+			border-radius: 0;
+			background-color: $secondary-color;
+			border: 0;
+			font-size: 14px;
+			color: $white;
+
+			i{
+				@include flaticon{
+					margin-right: 8px;
+					font-size: inherit;
+					color: $white;
+				}
+			}
+			@include responsive(1002px){
+				padding: 0 20px;
+			}
+			@include responsivemd{
+				width: 40px;
+				color: transparent;
+				padding: 0 10px;
+				background-color: transparent;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				border-top: 0;
+				border-bottom: 0;
+			}
+			@include responsivesm{
+				position: absolute;
+				top: 0;
+				right: 0;
+				pointer-events: none;
+				border-left: 0;
+
+			}
+			&:active{
+				background-color: $secondary-color;
+			}
+			
+		}
+	}
+	.form-group{
+		padding: 0 15px;
+		@include responsive(1002px){
+			padding: 0 10px;
+		}
+		@include responsivemd{
+			height: 100%;
+		}
+		&:first-child{
+			@include responsive(767.5px){
+				display: none;
+			}
+		}
+		.material-icons{
+			font-size: 16px;
+			color: #999;
+			@include flaticon{
+				font-size: inherit;
+				display: flex;
+			}
+		}
+		.city{
+			width: 100px;
+			padding: 0 10px;
+			@include responsive(1002px){
+				width: 70px;
+				padding: 0 6px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+		}
+		&:first-child{
+			a{
+				display: flex;
+				&:hover{
+					.material-icons{
+						color: $dark;
+					}
+				}
+			}
+		}
+		&:nth-child(2){
+			flex-grow: 1;
+			padding-left: 4px;
+			@include responsive(1002px){
+				padding-left: 0;	
+			}
+			@include responsivemd{
+				padding: 0;	
+			}
+			@include responsivesm{
+				margin: 0;	
+			}
+
+			input{
+				width: 100%;
+				text-overflow: ellipsis;
+				border-radius: 0;
+				height: 100%;
+				padding: 0 15px;
+				@include responsivemd{
+					padding: 0 8px;
+				}
+				@include responsivesm{
+					padding-right: 38px;
+					width: 30px;
+					@include transition;
+					margin-left: auto;
+				}
+			}
+			&:before{
+				content: "";
+				border-left: 2px solid #ddd;
+				height: 20px;
+				width: 1px;
+				position: absolute;
+				@include responsivemd{
+					content: none;
+				}
+			}
+		}
+	}
+
+
+	// cart and login
+	.header-login {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.cart-bag a{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		position: relative;
+		margin-left: 1.6em;
+		@include responsive(1210px){
+			margin-left: 0.6rem;
+		}
+		@include responsivesm{
+			margin-left: 0;
+		}
+		&:before{
+			content: "3";
+			position: absolute;
+			height: 20px;
+			width: 20px;
+			color: $white;
+			background-color: $secondary-color;
+			top: -9px;
+			right: -9px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 12px;
+			@include responsivesm{
+				content: "";
+				height: 10px;
+				width: 10px;
+				top: 0;
+				right: 0;
+			}
+		}
+		span{
+			font-size: 28px;
+			@include responsivesm{
+				font-size: 22px;
+			}
+		}
+	}
+
+	.login{
+		@include responsivemd{
+			display: none;
+		}
+		
+		color: $white;
+	}
+	.col-md-2{
+		padding: 0;	
+	}
+
+	.col-sm-9.col-md-8{
+		padding-right: 0;
+	}
+}
+
+.login.dropdown{
+	height: 50px;
+	line-height: 50px;
+	.dropdown-menu{
+		left: auto;
+		right: -30px;
+		padding: 12px;
+		top: 40px;
+		padding: 20px;
+		width: 270px;
+		@include responsive(1073px){
+			right: 2px;
+		}
+		.form-group{
+			width: 100%;
+			padding: 0;
+			&:before{
+				content: none;
+			}
+			&> input{
+				height: 40px;
+				border-radius: 4px;
+				margin-bottom: 1em;
+				&:focus, &:focus-within{
+					outline: none;
+					box-shadow: none;
+					border:1px solid #ddd;
+				}
+			}
+			
+		}
+		.form-check{
+			line-height: 20px;
+		}
+		button{
+			@include button;
+			width: 100%;
+			background-color: $secondary-color;
+			color: $white;
+			margin-right: 0;
+			margin-bottom: 1em;
+		}
+		p{
+			line-height: 1;
+			margin: 0;
+			font-size: 14px;
+		}
+		a{
+			font-size: 14px;
+			margin-left: 2px;
+			line-height: 0;
+			text-decoration: underline;
+			&:hover{
+				color: $secondary-color;
+			}
+		}
+
+	}
+}
+
+.dropdown-toggle::after{
+	content: none;
+}
+
+@mixin top{
+	.section-rule{
+		padding-top: 0;
+	}
+}
+
+@mixin border{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@mixin slicknav{
+	.material-icons{
+		font-size: 2.6rem;
+		@include responsivemd{
+			font-size: 2rem;
+		}
+	}
+	.slick-arrow{
+		background-color: rgba(255, 255, 255, 0.6);
+		border-radius: 50%;
+		z-index: 9;
+		height: 50px;
+		width: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #666;
+		transition: .3s ease;
+		opacity: 0.8;
+		overflow: hidden;
+		@include responsivemd{
+			height: 40px;
+			width: 40px;
+		}
+		@include responsive(520px){
+			display: none !important;
+		}
+		&:hover{
+			opacity: 1;
+
+		}
+		&:before{
+			content: none;
+		}
+		&.hidden{
+			opacity: 0;
+			pointer-events: none;
+			@include transition;
+		}
+	}
+}
+
+@mixin boxShadow{
+	box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+@mixin item{
+	margin: 0 10px;
+	@include responsivemd{
+		margin: 0 5px;
+	}
+}
+
+@mixin card-hover{
+	@include transition;
+	&:hover{
+		border-color: $secondary-color;
+		// @include boxShadow;
+	}
+}
+
+@mixin waitlist{
+	display: inline-block;
+	color: #999;
+	height: 38px;
+	width: 38px;
+	border-radius: 50%;
+	background-color: $white;
+	line-height: 47px;
+	text-align: center;
+	transition: .3s ease;
+	@include responsive(430px){
+		height: 32px;
+		width: 32px;
+		line-height: 41px;
+	}
+	span{
+		font-size: 20px;
+		@include responsive(430px){
+			font-size: 16px;
+		}
+	}
+	&:hover{
+		color: #c647a6;
+	}
+
+	&.active{
+		background-color: #c647a6;
+		color: $white;
+	}
+}
+@mixin card-button{
+	padding: 12px 44px;
+	font-size: 13px;
+	line-height: 13px;
+	margin-right: 0;
+	span{
+		font-size: inherit;
+		padding-right: 8px;
+		@include responsive(427px){
+			display: none;
+		}
+	}
+	@include responsive(1210px){
+		padding: 12px 20px;
+	}
+	@include responsivelg{
+		padding: 10px 20px;
+	}
+	@include responsive(480px){
+		padding: 10px 12px;
+		font-size: 12px;
+	}
+}
+.price{
+	@include price;
+}
+.title-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+	@include responsive(450.5px){
+		margin-bottom: 2px;
+
+	}
+	button{
+		@include button;
+		@include responsive(450.5px){
+			padding: 0;
+			border: 0;
+		}
+		&:hover{
+			@include responsive(450.5px){
+				background-color: transparent;
+				color: inherit;
+			}
+		}
+	}
+	.section-title{
+		margin-bottom: 0;
+	}
+
+}
+
+// start
+
+
+.secondary-menu{
+	@include border;
+	.section-rule{
+		padding:  0 !important;
+	}
+	@include responsivemd{
+		display: none;
+	}
+}
+i.fas.fa-chevron-down{
+	font-size: 12px;
+	margin-left: 5px;
+	transform: translateY(1.5px);
+}
+.dropdown-menu{
+	border: 0;
+	box-shadow: 1px 3px 8px #00000014;
+	.dropdown-item{
+		color: inherit;
+	}
+}
+
+.secondary-menu{
+	ul{
+		@include ul;
+		display: flex;
+		font-size: 14.5px;
+		color: #888;
+		font-weight: 600;
+		align-items: center;
+		@include responsivelg{
+			font-size: 13.5px;
+		}
+		li{
+			padding:1.2em;
+			&.active {
+				border-bottom: 2px solid $secondary-color;
+				color: $secondary-color;
+			}
+			@include responsivelg{
+				padding: 1.2em 1em;
+			}
+
+		}
+		a{
+			display: flex;
+			align-items: center;
+			&:hover{
+				color: $secondary-color;
+				path{
+					fill: $secondary-color;
+				}
+			}
+		}
+		svg{
+			height: auto;
+			padding-right: 6px;
+			width: 24px;
+			@include responsivelg{
+				width: 21px;
+			}
+		}		
+	}
+	.parent{
+		&>  li:first-child{
+			padding-left: 0;
+		}
+
+		&> li:last-child{
+			padding: 0;
+			margin-left: auto;
+			li{
+				background-color: #f2f2f2;
+				svg{
+					width: 38px;
+					padding-right: 8px;
+				}
+				&:last-child{
+				// border-left: 1px solid #0000001c;
+			}
+
+		}
+	}
+}
+
+.dropdown-menu{
+	position: absolute;
+	transform: translate3d(17px, 43px, 0px); 
+	top: 0px; 
+	left: 0px;
+	will-change: transform;
+	font-size: inherit;
+}
+}
+// secondary-nav
+.secondary-nav{
+	@extend .secondary-menu;
+	background-color: $white;
+	position: sticky;
+	top: 0rem;
+	z-index: 9;
+	transition: .6s ease-out;
+	&.added{
+		top: 75px;
+	}
+	.parent {
+		justify-content: flex-start;
+		&> li:last-child{
+			margin: 0;
+			padding: 1.2em;
+		}
+		
+	}	
+}
+
+//screen
+.screen{
+	.single-carousel{
+		.item{
+			height: 300px;
+			border-radius: 7px;
+			// overflow: hidden;
+			@include responsive(1210px){
+				border-radius: 6px;
+				overflow: hidden;
+			}
+			@include responsivemd{
+				height: auto;
+				border-radius: 0;
+			}
+			a{
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+		}
+		img{
+			@include image;
+		}
+		@include slicknav;
+		.slick-next {
+			right: 35px;
+		}
+		.slick-prev {
+			left: 35px;
+		}
+	}
+	aside{
+		@include responsivelg{
+			max-width: 100%;
+			width: 100%;
+			padding: 0;
+		}
+		.card{
+			padding: 2em;
+			height: 300px;
+			justify-content: center;
+			border-radius: 11px;
+			@include border;
+			@include responsive(1210px){
+				border-radius: 6px;
+				padding: 1em;
+			}
+		}
+		h2{
+			font-size: 2rem;
+			color: #767676;
+			font-weight: bold;
+		}
+		.para{
+			color: #666;
+			font-size: 1em;
+		}
+		a{
+			margin-right: 1em;
+		}
+		&:last-child{
+			padding-right: 0;
+			@include responsivelg{
+				display: none;
+			}
+		}
+	}
+}
+
+// categories
+.categories{
+	@include top;
+	font-size: 16px;
+	@include responsivemd{
+		font-size: 14px;
+	}
+	@include responsive(450px){
+		font-size: 13px;
+	}
+	img{
+		width: 65px;
+		height: auto;
+		margin: 0 auto 12px;
+		@include responsivemd{
+			width: 50px;
+			margin-bottom: 6px;
+			height: auto;
+		}
+		@include responsive(450px){
+			background-color: #f2f2f2;
+			padding: 9px 0;
+			width: 80% !important;
+			border-radius: 6px;
+			margin-bottom: 0;
+		}
+
+
+	}
+	
+	.card-title{
+		@include card-title;
+		height: auto;
+		text-align: center;
+		font-size: 1.1em;
+		font-weight: 600;
+		@include responsivemd{
+			font-size: 1em;
+		}
+		@include responsive(450px){
+			font-size: 13px;
+			background-color: #fff;
+			padding-top:6px;
+		}
+	}
+	.item{
+		@include item;
+		&:first-child{
+			.card{
+				background-color: $secondary-color;
+				.card-title{
+					color: $white;
+					@include responsive(450px){
+						color: inherit;
+					}
+				}
+				@include responsive(450px){
+					background-color: #f2f2f2;
+				}
+			}
+		}
+	}
+	.card{
+		padding: 1em;
+		a{
+			border-radius: 6px;
+		}
+		@include transition;
+		&:hover{
+			background-color: $secondary-color;
+			.card-title{
+				color: $white;
+				@include responsive(450px){
+					color: inherit;
+				}
+			}
+			@include responsive(450px){
+				background-color: #f2f2f2;
+			}
+		}
+		@include responsivemd{
+			padding: 12px;
+		}
+		@include responsive(450px){
+			border: 0;
+			padding: 0;
+			background-color:#f2f2f2; 
+		}
+	}
+	@include slicknav;
+	.slick-list.draggable{
+		padding: 12px 0;
+		@include responsivemd{
+			padding:  0;
+		}
+	}
+	.slick-arrow{
+		@include boxShadow;
+	}
+}
+
+// top-brands
+.top-brands{
+	@include top;
+	img{
+		@include image;
+	}
+	@include slicknav;
+	.slick-arrow{
+		@include boxShadow;
+	}
+	.card-title{
+		@include card-title;
+	}
+	.card-image{
+		height: 190px;
+		margin-bottom: 10px;
+		position: relative;
+		img{
+			object-fit: contain;
+			background-color: transparent;
+		}
+		@include responsivelg{
+			height: 160px;
+		}
+		@include responsivemd{
+			height: 140px;
+		}
+		@include responsive(430px){
+			height: 120px;
+		}
+	}
+	.item{
+		@include item;
+	}
+	.card{
+		padding: 1em;
+		@include card-hover;
+		@include responsivelg{
+			font-size: 13px;
+		}
+		@include responsivemd{
+			padding: 10px;
+		}
+		.card-title a:hover{
+			@include transition;
+			color: $secondary-color;
+		}
+	}
+	.slick-list.draggable{
+		padding: 4px 0 12px 0;
+	}
+	
+	.waitlist{
+		@include waitlist;
+	}
+	.action{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.shop{
+		color: #999;
+		display: flex;
+		line-height: 11px;
+		font-size: 14px;
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		margin-right: 1rem;
+		@include responsivelg{
+			font-size: inherit;
+		}
+		i{
+			font-size: inherit;
+			margin-left: 6px;
+		}
+		&:hover{
+			color: $secondary-color;
+		}
+	}
+}
+
+// banner
+.banner{
+	.section-rule{
+		padding: 0;
+		a{
+			display: block;
+			border-radius: 8px;
+			overflow: hidden;
+
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+
+
+// products
+.products {
+	.tab-content{
+		img{
+			@include image;
+		}
+		@include slicknav;
+		.slick-arrow{
+			@include boxShadow;
+		}
+		.card-title{
+			@include card-title;
+			@include responsive(1200px){
+				height: auto;
+			}
+			a{
+				@include responsive(1200px){
+					@include linecamp(1);
+				}
+			}
+		}
+		@include card-image;
+		
+		.item{
+			@include item;
+		}
+		article{
+			padding: 6px 10px !important;
+			@include responsivemd{
+				padding: 6px !important;
+			}
+			@include responsive(400px){
+				padding: 3px !important;
+			}
+		}
+		.card{
+			padding: 1em;
+			@include responsivelg{
+				font-size: 13px;
+			}
+			@include responsivemd{
+				padding: 10px;
+			}
+			@include responsive(480px){
+				padding: 8px;
+			}
+			@include card-hover;
+			.card-image{
+				img{
+					object-fit: contain;
+					background-color: transparent;
+				}
+				@include responsivelg{
+					height: 160px;
+				}
+				@include responsivemd{
+					height: 140px;
+				}
+				@include responsive(430px){
+					height: 120px;
+				}
+			}
+			.card-title a:hover{
+				@include transition;
+				color: $secondary-color;
+			}
+			button{
+				@include button;
+				@include card-button;
+				@include responsive(340px){
+					padding: 8px 12px;
+					font-size: 11px;
+				}
+				
+			}
+		}
+		.slick-list.draggable{
+			padding: 4px 0 12px 0;
+		}
+
+		.waitlist{
+			@include waitlist;
+			background-color: $white;
+		}
+		.action{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: 6px 0 1em 0;
+			@include responsive(1210px){
+				margin: 3px 0 9px 0;
+			}
+			@include responsivemd{
+				margin: 3px 0 0;
+			}
+		}
+		.shop{
+			color: #999;
+			display: flex;
+			line-height: 11px;
+			font-size: 14px;
+			border: none;
+			background-color: transparent;
+			padding: 0;
+			margin-right: 1rem;
+			@include responsivelg{
+				font-size: inherit;
+			}
+			@include responsivemd{
+				display: none;
+			}
+			i{
+				font-size: inherit;
+				margin-left: 6px;
+			}
+			&:hover{
+				color: $secondary-color;
+			}
+		}
+		article:last-child{
+			@include responsive(1200px){
+				display: none;
+			}
+			@include responsivemd{
+				display: initial;
+			}
+		}
+	}
+
+	.nav-tabs{
+		position: relative;
+		border: 0;
+		.nav-item{
+			margin-bottom: 0px;
+			height: 55px;
+			line-height: 55px;
+			@include responsivelg{
+				height: 40px;
+				line-height: 40px;
+			}
+
+			@include responsive(450.5px){
+				height: 20px;
+				line-height: 20px;
+			}
+			.nav-link{
+				border: 0;
+				padding: 0;
+				@include responsivemd{
+					padding: 0 5px;
+				}
+				h2{
+					opacity: .5;
+					transform: scale(.8);
+					transform-origin: bottom;
+					@include transition;
+					@include responsivemd{
+						transform: scale(1);
+						opacity: .3;
+						text-indent: 0 !important;
+					}
+					&:hover{
+						opacity: 1;
+					}
+					@include responsive(480px){
+						width: 60px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						word-break: keep-all;
+						height: 18px;
+						white-space: nowrap;
+					}
+				}
+				&.active{
+					.section-title{
+						opacity: 1;
+						transform: scale(1);
+						@include responsivemd{
+							border-bottom: 1px solid #313131;
+						}
+						@include responsive(480px){
+							width: auto;
+						}
+					}
+					button{
+						display: initial;
+					}
+				}
+			}
+			button{
+				position: absolute;
+				top: 3px;
+				right: 0;
+				display: none;
+				@include responsive(450.5px){
+					top: 0px;
+				}
+				@include responsive(400px){
+					top: -2px;
+				}
+			}
+		}
+	}
+}
+
+// banner second
+
+.banner.second{
+	.item{
+		@include item;
+	}
+	@include slicknav;
+
+}
+
+// hot-Products
+.hot-Products{
+	img{
+		@include image;
+	}
+	@include slicknav;
+	.slick-arrow{
+		@include boxShadow;
+	}
+	.card-title{
+		@include card-title;
+	}
+	@include card-image;
+
+	.item{
+		@include item;
+	}
+	.card{
+		padding: 1em;
+		@include card-hover;
+		@include responsivelg{
+			font-size: 13px;
+		}
+		@include responsivemd{
+			padding: 10px;
+		}
+		@include responsive(480px){
+			padding: 8px;
+		}
+		.card-title a:hover{
+			@include transition;
+			color: $secondary-color;
+
+		}
+		button{
+			@include button;
+			@include card-button;
+			span{
+				font-size: inherit;
+				padding-right: 8px;
+			}
+		}
+	}
+	.card-image{
+		img{
+			object-fit: contain;
+			background-color: transparent;
+		}
+		@include responsivelg{
+			height: 160px;
+		}
+		@include responsivemd{
+			height: 140px;
+		}
+		@include responsive(430px){
+			height: 120px;
+		}
+	}
+	.slick-list.draggable{
+		padding: 4px 0 12px 0;
+	}
+
+	.waitlist{
+		@include waitlist;
+		background-color: $white;
+	}
+	.action{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 6px 0 1em 0;
+		@include responsive(1210px){
+			margin: 3px 0 9px 0;
+		}
+		@include responsivemd{
+			margin: 3px 0 0;
+		}
+	}
+	.shop{
+		color: #999;
+		display: flex;
+		line-height: 11px;
+		font-size: 14px;
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		margin-right: 1rem;
+		@include responsivelg{
+			font-size: inherit;
+		}
+		@include responsivemd{
+			display: none;
+		}
+		i{
+			font-size: inherit;
+			margin-left: 6px;
+		}
+		&:hover{
+			color: $secondary-color;
+		}
+	}
+	
+	.section-rule{
+		padding-top: 30px;
+	}
+	
+}
+
+.newsletter{
+	background-color:#f8f8fb;
+	.section-rule{
+		padding: 50px 0;
+		@include responsive(461px){
+			padding:20px 0;
+		}
+	}
+	.card-title{
+		@include card-title;
+		height: auto;
+		font-size: 1.2rem;
+		color: #9c9c9c;
+		text-transform: initial;
+		font-weight: 500;
+		line-height: 1.4;
+		-webkit-line-clamp: none;
+		-webkit-box-orient: block-axis;
+		overflow: visible;
+		height: auto;
+		@include responsivemd{
+			font-size: 16px;
+			font-weight: 600;
+			height: 100%;
+			margin-bottom: 13px;
+			color: #7d7d7d;
+		}
+		@include responsivesm{
+			font-size: 13px;
+			font-weight: 500;
+			color: #8c8c8c;
+		}
+	}
+	form{
+		flex-wrap: nowrap;
+
+		input[type="email"]{
+			flex-grow: 1;
+			height: 50px;
+			margin-right: 0 !important;
+			border-radius: 2px 0 0 2px;
+			&:focus, &:focus-within{
+				outline: none;
+				box-shadow: none;
+				border:1px solid #ced4da;
+			}
+		}
+		button{
+			height: 50px;
+			padding: 0 40px;
+			border-radius: 0;
+			background-color: #13b0b5;
+			border: 0;
+			font-size: 16px;
+			color: #f9f9f9;
+			border-radius: 0 2px 2px 0;
+			@include responsive(461px){
+				padding: 0 20px;
+			}
+
+		}
+		input[type="email"], button{
+			@include responsive(461px){
+				height: 42px;
+			}
+			@include responsive(335px){
+				height: 38px;
+			}	
+		}
+	}
+}
+
+.footer{
+	h4{
+		
+		font-size: 20px;
+		color: $secondary-color;
+		margin-bottom: 8px;
+		@include responsivemd{
+			font-size: 1rem;
+			margin-bottom: 6px;
+		}
+		@include responsive(590px){
+			font-size: 14px;
+			margin-bottom: 6px;
+		}
+	}
+	ul{
+		@include ul;
+		column-count:2;
+		color: #666;
+		font-size: 1em;
+		line-height: 2;
+		@include responsivemd{
+			font-size: 13px;
+		}
+		a{
+			&:hover{
+				color: $primary-color;
+			}
+		}
+	}
+	.col{
+		@include responsivemd{
+			margin-bottom:12px;
+		}
+	}
+	.social{
+		margin-bottom: 0 !important;
+		ul{
+			display: flex;
+			flex-wrap: wrap;
+			li{
+				margin: 0 12px;
+				font-size: 1.5em;
+			}
+		}	
+	}
+	.last-footer{
+		border-top: 1.5px solid rgba(0,0,0,.1);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: #888;
+		@include responsivelg{
+			font-size: 13px;
+			padding: 16px 0;
+		}
+		@include responsivemd{
+			padding: 12px 0;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+		}
+		@include responsive(395px){
+			font-size: 11px;
+		}
+		p{
+			@include responsivemd{
+				order:1;
+			}
+			margin-bottom: 0;
+			a{
+				color: #1598f3;
+			}
+		}
+		.footer-link{
+			a{
+				padding: 0 6px;
+				&:not(:first-child){
+					border-left: 1.5px solid #bbb;
+				}
+				&:hover{
+					color: $primary-color;
+
+				}
+			}
+		}
+	}
+
+}
+
+@import 'otherpage.scss';
